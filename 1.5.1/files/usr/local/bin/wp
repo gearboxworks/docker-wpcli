@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#ARG1=$1
+#shift
+case $1 in
+	'TEST')
+		echo "Gearbox: ERROR: Command currently unsupported."
+		exit
+		;;
+
+	*)
+		;;
+esac
+
+exec /usr/local/bin/wp.bin "$@"

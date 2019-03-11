@@ -1,0 +1,27 @@
+# This is to be run from the base O/S using the files/usr/local/bin/wp-x.x.x script.
+
+FROM php:7.0-alpine
+# FROM gearbox/php:7.0
+
+MAINTAINER Gearbox Team <team@gearbox.works>
+
+ARG WPCLI_VERSION=1.5.1
+ENV HOME /root
+ENV CLI_HOST gearbox.local
+COPY files /
+
+RUN apk update && \
+	apk add --no-cache sudo ncurses less git bash && \
+	docker-php-ext-install mysqli && \
+	curl -q -L https://github.com/wp-cli/wp-cli/releases/download/v$WPCLI_VERSION/wp-cli-$WPCLI_VERSION.phar -o wp-cli.phar && \
+	mv wp-cli.phar /usr/local/bin/wp.bin && \
+	chmod +x /usr/local/bin/wp*
+#	/usr/local/bin/wp --allow-root package install git@github.com:wp-cli/profile-command.git
+# https://github.com/wp-cli/profile-command.git
+
+
+COPY gearbox.json /etc/gearbox.json
+WORKDIR /project/www
+
+ENTRYPOINT ["wp", "--allow-root"]
+

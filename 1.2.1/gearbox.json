@@ -1,0 +1,16 @@
+{
+	"state": "production",
+	"organization": "gearboxworks",
+	"name": "wp-cli",
+	"version": "1.2.1",
+	"majorversion": "1.2",
+	"latest": "0",
+	"class": "admin",
+	"network": "--network gearboxnet",
+	"ports": "",
+	"volumes": "",
+	"restart": "--restart no",
+	"args": "",
+	"env": "WP_CLI_VERSION"
+}
+
