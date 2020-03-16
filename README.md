@@ -1,3 +1,5 @@
+![release](https://github.com/gearboxworks/docker-wpcli/workflows/release/badge.svg?event=release)
+
 ![wp-cli 1.0.x](https://img.shields.io/badge/wpcli-1.0.x-green.svg)
 ![wp-cli 1.1.x](https://img.shields.io/badge/wpcli-1.1.x-green.svg)
 ![wp-cli 1.2.x](https://img.shields.io/badge/wpcli-1.2.x-green.svg)

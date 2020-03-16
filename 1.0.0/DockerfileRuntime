@@ -54,4 +54,4 @@ RUN /bin/sh /build/build-base.sh
 RUN /bin/sh /build/build-redis.sh
 
 # 8. Expose ports.
-EXPOSE 6379
+EXPOSE 22 6379
